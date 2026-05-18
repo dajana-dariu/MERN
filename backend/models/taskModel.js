@@ -6,7 +6,13 @@ const taskSchema = mongoose.Schema(
       type: String,
       remquired: [true, 'Please add a text value'],
     },
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      remquired: true,
+      ref: 'User',
+    },
   },
+
   {
     timestamps: true,
   },
