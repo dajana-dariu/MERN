@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
   try {
-    // Shtuam { family: 4 } si parametër të dytë këtu
     const connect = await mongoose.connect(process.env.MONGO_URI, {
       family: 4,
     });
