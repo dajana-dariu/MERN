@@ -11,8 +11,8 @@ const {
 const { protect } = require('../Middleware/authMiddleware');
 
 router.get('/', protect, getTasks);
-router.post('/', protect, setTask);
-router.put('/:id', protect, updateTask);
-router.delete('/:id', protect, deleteTask);
+router.post('/', setTask);
+router.put('/:id', updateTask);
+router.delete('/:id', deleteTask);
 
 module.exports = router;
